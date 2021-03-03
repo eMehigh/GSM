@@ -1,0 +1,90 @@
+{%load static%}
+<html>
+<header>
+    <title>GSM GĂEȘTI</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css" rel="stylesheet" />
+        <!-- MDB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.js"></script> 
+</header>
+<style>
+    body,html{
+        height: 100%;
+        width: 100%;
+        font-family: 'Maven Pro', sans-serif;
+        background-image: url("{%static 'bg.jpg'%}");
+    }
+    #nav-button{
+    color: #E1ECF9;
+    background-color: #172754;
+    }
+</style>
+<body>
+    <div class="d-flex h-100 flex-column">
+        
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #091D34;">
+    <a class="navbar-brand ml-5" style="color: #E1ECF9;" href="{%url 'home'%}"><strong>GSM GAEȘTI</strong> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="btn nav-link pl-5 pr-5" id="nav-button" href="{%url 'home'%}">Acasa<span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="btn nav-link pl-5 pr-5" id="nav-button" href="{%url 'shop'%}">Magazin</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="btn nav-link pl-5 pr-5" id="nav-button" href="{%url 'info' 'alltabs'%}">Informații</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn nav-link pl-5 pr-5" id="nav-button" href="{%url 'form-page' %}">Ai o intrebare?</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% if messages %}
+<div class="alert alert-warning" role="alert">
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+</div>
+{% endif %}
+
+    {%block content%}
+
+    {%endblock%}
+ </div>
+
+</body>
+
+</html>

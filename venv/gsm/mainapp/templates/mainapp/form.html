@@ -1,0 +1,73 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<div class="container-fluid w-100 h-100 row text-white">
+
+ 
+
+    <div class="col-lg-6 col-sm-12 col-md-12 mt-5 d-flex flex-column">
+        <h3 class="ml-5 mb-3">Adreseaza-ne o intrebare!</h3>
+        <form action="{%url 'form-page'%}" method="POST" class="m-5 text-black">
+            {%csrf_token%}
+            <!-- Subiect input -->
+            <div class="mb-4">
+                <input name="subiect" type="text" id="form4Example2" class="form-control" placeholder="Subiect" required/>
+            </div>
+            <!-- Name input -->
+            <div class="mb-4">
+                <input name="nume" type="text" id="form4Example1" class="form-control" placeholder="Nume și prenume" required/>
+            </div>
+
+            <!-- Email input -->
+            <div class="mb-4">
+                <input name="email" type="email" id="form4Example2" class="form-control" placeholder="Adresa de e-mail" required/>
+            </div>
+            
+            <!-- Phone number input -->
+            <div class="mb-4">
+                <input name="phone-number" type="text" id="form4Example2" class="form-control" placeholder="Numar de telefon" required/>
+            </div>
+
+
+            <!-- Message input -->
+            <div class="mb-4">
+                <textarea name="message" required class="form-control" id="form4Example3" placeholder="Descrie-ne problema" rows="4"></textarea > 
+            </div>
+
+            <div clas="mb-4">
+             <p class="text-white">*Raspunsul îl veți primi pe adresa de mail.</p>
+            </div>
+
+      
+
+            <!-- Submit button -->
+            <button type="submit" style="float: right; background-color: #172754;" class="text-white btn mb-4" >Send</button>
+        </form>
+    </div>
+    <div class="mt-5 col-lg-6 col-sm-12 col-md-12 d-flex flex-column">
+        <h2 class="text-center mb-3">Cu ce te putem ajuta ?</h2>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 col-md-12">
+                <p class="m-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam officia autem sequi quo ipsa quasi. Suscipit provident nam quam, itaque illum, aut libero neque quo veritatis praesentium, similique dignissimos voluptatum.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam officia autem sequi quo ipsa quasi. Suscipit provident nam quam, itaque illum, aut libero neque quo veritatis praesentium, similique dignissimos voluptatum.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam officia autem sequi quo ipsa quasi. Suscipit provident nam quam, itaque illum, aut libero neque quo veritatis praesentium, similique dignissimos voluptatum.
+                </p>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 col-md-12">
+                <img src="{%static 'form-image.jpg'%}" alt="" class="m-3" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="col-12">
+                <p class="m-4 mt-5">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis odit tempore a ipsum ab ducimus veritatis, pariatur omnis laudantium at quibusdam blanditiis dolorum voluptatum ut, iure debitis dolorem consequuntur iste!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis odit tempore a ipsum ab ducimus veritatis, pariatur omnis laudantium at quibusdam blanditiis dolorum voluptatum ut, iure debitis dolorem consequuntur iste!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis odit tempore a ipsum ab ducimus veritatis, pariatur omnis laudantium at quibusdam blanditiis dolorum voluptatum ut, iure debitis dolorem consequuntur iste!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis odit tempore a ipsum ab ducimus veritatis, pariatur omnis laudantium at quibusdam blanditiis dolorum voluptatum ut, iure debitis dolorem consequuntur iste!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis odit tempore a ipsum ab ducimus veritatis, pariatur omnis laudantium at quibusdam blanditiis dolorum voluptatum ut, iure debitis dolorem consequuntur iste!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
